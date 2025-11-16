@@ -3,8 +3,6 @@ build/
 install/
 log/
 devel/
-*.o
-*.so
 *.exe
 
 # 临时文件
