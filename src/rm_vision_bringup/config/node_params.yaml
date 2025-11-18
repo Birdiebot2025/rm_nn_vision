@@ -1,14 +1,14 @@
 /camera_node:
   ros__parameters:
     camera_info_url: package://rm_vision_bringup/config/camera_info.yaml
-    exposure_time: 1350
+    exposure_time: 20000
     gain: 10.0
 
 /serial_driver:
   ros__parameters:
     timestamp_offset: 0.0006
-    device_name: /dev/rmvision
-    baud_rate: 921600
+    device_name: /dev/ttyUSB0
+    baud_rate: 115200 #921600
     flow_control: none
     parity: none
     stop_bits: "1"
