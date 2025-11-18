@@ -271,9 +271,10 @@ std::vector<Armor> ArmorDetectorNode::detectArmors(
       armor.type = narmor.type == auto_aim::ArmorType::small ? rm_auto_aim::ArmorType::SMALL
                                                               : rm_auto_aim::ArmorType::LARGE;
 
-      armor.number = narmor.name != auto_aim::ArmorName::not_armor 
-                 ? std::to_string(static_cast<int>(narmor.name)) 
-                 : "";
+      const std::vector<std::string> ARMOR_NUMBER = {
+          "1", "2", "3", "4", "5", "6", "outpost", "8", "9"
+      };
+      armor.number = ARMOR_NUMBER[static_cast<int>(narmor.name)];
 
       armors.push_back(armor);
   }
